@@ -19,11 +19,10 @@ public class Main {
         ){
             Scanner scanner = new Scanner(System.in);
             String message = "";
-            while (message!="exit"){
+            while (!message.equals("exit")){
                 System.out.println("Сервер : "+input.readUTF());
                 message = scanner.nextLine();
                 output.writeUTF(message);
-                System.out.println("The request was sent.");
             }
         } catch (IOException e){
             System.out.println("Клиент отключился");
